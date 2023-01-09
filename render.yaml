@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: newsletter
+    env: node
+    plan: free
+    buildCommand: yarn
+    startCommand: node app.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET_KEY
+        generateValue: true
